@@ -1,4 +1,14 @@
+<div fxLayout="row">
+  <h1 fxFlex="50">My chatbots</h1>
+  <div fxFlex fxLayoutAlign="end center" fxLayoutGap="12px">
+    <input fxFlex="40" matInput placeholder="Search" />
+    <button mat-button>Order by name</button>
+    <button mat-button>Order by creation</button>
+    <img src="../../../assets/organize-blocks.png" alt="Organize blocks" />
+    <img src="../../../assets/organize-list.png" alt="Organize list" />
+  </div>
+</div>
+<h2>Favorites</h2>
 <div>
-  <h1>My chatbots</h1>
-  <input type="text" />
+  <app-chatbot-as-list></app-chatbot-as-list>
 </div>

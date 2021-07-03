@@ -2,4 +2,39 @@ h1 {
   font-size: 42px;
   color: #56616e;
   font-weight: 900;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+}
+
+h2 {
+  font-size: 42px;
+  color: #607b99;
+  font-family: "Lato", sans-serif;
+  margin: 42px 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+img {
+  cursor: pointer;
+}
+
+::ng-deep {
+  .mat-input-element {
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #d2dfe6;
+    height: 36px;
+    padding: 20px 8px;
+  }
+
+  .mat-button {
+    background-color: #2cc3d5;
+    color: white;
+    height: 42px;
+    border-radius: 10px !important;
+    overflow: auto !important;
+  }
 }
