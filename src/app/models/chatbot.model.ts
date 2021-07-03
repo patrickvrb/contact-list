@@ -10,6 +10,7 @@ export interface Chatbot {
   culture: string;
   favorite: boolean;
   analytics: Analytics;
+  dotColor: string;
 }
 
 interface Analytics {

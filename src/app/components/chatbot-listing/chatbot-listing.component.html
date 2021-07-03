@@ -1,7 +1,7 @@
 <div fxLayout="row">
   <h1 fxFlex="50">My chatbots</h1>
   <div fxFlex fxLayoutAlign="end center" fxLayoutGap="12px">
-    <input fxFlex="40" matInput placeholder="Search" />
+    <input [(ngModel)]="searchText" fxFlex="40" matInput placeholder="Search" />
     <button (click)="orderByName()" mat-button>Order by name</button>
     <button (click)="orderByCreation()" mat-button>Order by creation</button>
     <img
@@ -18,12 +18,12 @@
 </div>
 <h2>Favorites</h2>
 <div *ngIf="!toggleCards">
-  <div class="mg-top-bot-24" *ngFor="let chatbot of chatbots">
+  <div class="mg-top-bot-24" *ngFor="let chatbot of filterByName(searchText)">
     <app-chatbot-as-list [chatbot]="chatbot"></app-chatbot-as-list>
   </div>
 </div>
 <div *ngIf="toggleCards" class="grid-container">
-  <div *ngFor="let chatbot of chatbots">
+  <div *ngFor="let chatbot of filterByName(searchText)">
     <app-chatbot-as-square [chatbot]="chatbot"></app-chatbot-as-square>
   </div>
 </div>

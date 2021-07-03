@@ -12,10 +12,10 @@
     alt="Star"
   />
   <div class="panel" fxLayout="row">
-    <span class="dot"></span>
+    <span [style.background-color]="chatbot.dotColor" class="dot"></span>
     <div fxLayout="row" fxLayoutAlign="space-between center">
-      <div>Botname</div>
-      <div>Created at</div>
+      <div>{{ chatbot.name }}</div>
+      <div>Created at {{ chatbot.created | date: "dd/MM/yyyy" }}</div>
     </div>
   </div>
 </div>

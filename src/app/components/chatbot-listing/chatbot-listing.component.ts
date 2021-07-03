@@ -10,14 +10,33 @@ import { ChatbotService } from 'src/app/services/chatbot.service';
 export class ChatbotListingComponent implements OnInit {
   toggleCards = true;
   chatbots: Chatbot[];
+  searchText = '';
   constructor(private chatbotService: ChatbotService) {
     this.chatbots = this.chatbotService.getChatbots();
-    console.log(this.chatbots);
   }
 
   ngOnInit(): void {}
 
-  orderByName(): void {}
+  orderByName(): void {
+    this.chatbots.sort((a, b) => a.name.localeCompare(b.name));
+  }
 
-  orderByCreation(): void {}
+  orderByCreation(): void {
+    this.chatbots.sort((a, b) => {
+      let dateA = new Date(a.created);
+      let dateB = new Date(b.created);
+      return dateA.getTime() - dateB.getTime();
+    });
+  }
+
+  filterByName(name: string): Chatbot[] {
+    if (name) {
+      name = name.toLocaleLowerCase();
+      return this.chatbots.filter(
+        (chatbot: Chatbot) =>
+          chatbot.name.toLocaleLowerCase().indexOf(name) !== -1
+      );
+    }
+    return this.chatbots;
+  }
 }

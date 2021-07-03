@@ -8,7 +8,8 @@ import { ChatbotService } from 'src/app/services/chatbot.service';
   styleUrls: ['./chatbot-as-list.component.scss'],
 })
 export class ChatbotAsListComponent implements OnInit {
-  @Input() chatbot: any;
+  @Input() chatbot!: Chatbot;
+
   constructor(private chatbotService: ChatbotService) {}
 
   ngOnInit(): void {}

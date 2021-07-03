@@ -12,9 +12,7 @@ export class ChatbotAsSquareComponent implements OnInit {
 
   constructor(private chatbotService: ChatbotService) {}
 
-  ngOnInit(): void {
-    console.log(this.chatbot);
-  }
+  ngOnInit(): void {}
 
   setFavorite(chatbot: Chatbot): void {
     this.chatbotService.setFavorite(chatbot);
