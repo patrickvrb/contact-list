@@ -1,13 +1,13 @@
 <div class="square">
   <img
-    (click)="removeFavorite(chatbot)"
-    *ngIf="chatbot.favorite"
+    (click)="setFavorite(chatbot)"
+    *ngIf="!chatbot.favorite"
     src="../../../assets/favorite.png"
     alt="Favorite"
   />
   <img
-    (click)="setFavorite(chatbot)"
-    *ngIf="!chatbot.favorite"
+    (click)="removeFavorite(chatbot)"
+    *ngIf="chatbot.favorite"
     src="../../../assets/star.png"
     alt="Favorite"
   />

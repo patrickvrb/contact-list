@@ -16,14 +16,39 @@
     />
   </div>
 </div>
+
 <h2>Favorites</h2>
+
 <div *ngIf="!toggleCards">
+  <div class="mg-top-bot-24" *ngFor="let chatbot of getFavorites()">
+    <app-chatbot-as-list
+      *ngIf="chatbot.favorite"
+      [chatbot]="chatbot"
+    ></app-chatbot-as-list>
+  </div>
+  <mat-divider></mat-divider>
   <div class="mg-top-bot-24" *ngFor="let chatbot of filterByName(searchText)">
-    <app-chatbot-as-list [chatbot]="chatbot"></app-chatbot-as-list>
+    <app-chatbot-as-list
+      *ngIf="!chatbot.favorite"
+      [chatbot]="chatbot"
+    ></app-chatbot-as-list>
   </div>
 </div>
-<div *ngIf="toggleCards" class="grid-container">
+
+<div *ngIf="toggleCards" class="container">
+  <div *ngFor="let chatbot of getFavorites()">
+    <app-chatbot-as-square
+      *ngIf="chatbot.favorite"
+      [chatbot]="chatbot"
+    ></app-chatbot-as-square>
+  </div>
+</div>
+<mat-divider *ngIf="toggleCards"></mat-divider>
+<div *ngIf="toggleCards" class="container">
   <div *ngFor="let chatbot of filterByName(searchText)">
-    <app-chatbot-as-square [chatbot]="chatbot"></app-chatbot-as-square>
+    <app-chatbot-as-square
+      *ngIf="!chatbot.favorite"
+      [chatbot]="chatbot"
+    ></app-chatbot-as-square>
   </div>
 </div>

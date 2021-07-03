@@ -13,9 +13,14 @@ export class ChatbotListingComponent implements OnInit {
   searchText = '';
   constructor(private chatbotService: ChatbotService) {
     this.chatbots = this.chatbotService.getChatbots();
+    this.chatbotService.getFavorites();
   }
 
   ngOnInit(): void {}
+
+  getFavorites(): Chatbot[] {
+    return this.chatbotService.getFavorites();
+  }
 
   orderByName(): void {
     this.chatbots.sort((a, b) => a.name.localeCompare(b.name));

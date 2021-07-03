@@ -10,6 +10,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
 import { ChatbotAsSquareComponent } from './components/chatbot-as-square/chatbot-as-square.component';
 import { ChatbotAsListComponent } from './components/chatbot-as-list/chatbot-as-list.component';
 import { FormsModule } from '@angular/forms';
@@ -32,6 +33,7 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatCardModule,
     FormsModule,
+    MatDividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

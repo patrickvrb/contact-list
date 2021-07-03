@@ -18,6 +18,10 @@ export class ChatbotService {
     return chatbotList;
   }
 
+  getFavorites(): Chatbot[] {
+    return chatbotList.filter((chatbot: Chatbot) => chatbot.favorite);
+  }
+
   setFavorite(chatbot: Chatbot): void {
     let index = chatbotList.indexOf(chatbot);
     chatbotList[index].favorite = true;

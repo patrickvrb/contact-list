@@ -1,13 +1,13 @@
 <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
   <img
-    (click)="removeFavorite(chatbot)"
-    *ngIf="chatbot.favorite"
+    (click)="setFavorite(chatbot)"
+    *ngIf="!chatbot.favorite"
     src="../../../assets/favorite.png"
     alt=""
   />
   <img
-    (click)="setFavorite(chatbot)"
-    *ngIf="!chatbot.favorite"
+    (click)="removeFavorite(chatbot)"
+    *ngIf="chatbot.favorite"
     src="../../../assets/star.png"
     alt="Star"
   />
