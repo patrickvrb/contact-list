@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import data from '../../../mocks/data.json';
+import { Chatbot } from 'src/app/models/chatbot.model';
+import { ChatbotService } from 'src/app/services/chatbot.service';
 
 @Component({
   selector: 'app-chatbot-listing',
@@ -7,13 +8,16 @@ import data from '../../../mocks/data.json';
   styleUrls: ['./chatbot-listing.component.scss'],
 })
 export class ChatbotListingComponent implements OnInit {
-  chatbots = data;
-
-  toggleCards = false;
-
-  constructor() {}
-
-  ngOnInit(): void {
-    console.log(data);
+  toggleCards = true;
+  chatbots: Chatbot[];
+  constructor(private chatbotService: ChatbotService) {
+    this.chatbots = this.chatbotService.getChatbots();
+    console.log(this.chatbots);
   }
+
+  ngOnInit(): void {}
+
+  orderByName(): void {}
+
+  orderByCreation(): void {}
 }

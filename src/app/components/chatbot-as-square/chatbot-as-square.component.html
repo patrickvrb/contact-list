@@ -1,6 +1,17 @@
 <div class="square">
-  <img src="../../../assets/favorite.png" alt="Favorite" />
+  <img
+    (click)="removeFavorite(chatbot)"
+    *ngIf="chatbot.favorite"
+    src="../../../assets/favorite.png"
+    alt="Favorite"
+  />
+  <img
+    (click)="setFavorite(chatbot)"
+    *ngIf="!chatbot.favorite"
+    src="../../../assets/star.png"
+    alt="Favorite"
+  />
   <span class="circle"></span>
-  <div>Bot name</div>
-  <div>Builder</div>
+  <div>{{ chatbot.name | titlecase }}</div>
+  <div>{{ chatbot.template | titlecase }}</div>
 </div>
