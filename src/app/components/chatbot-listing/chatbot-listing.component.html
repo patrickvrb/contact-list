@@ -4,11 +4,26 @@
     <input fxFlex="40" matInput placeholder="Search" />
     <button mat-button>Order by name</button>
     <button mat-button>Order by creation</button>
-    <img src="../../../assets/organize-blocks.png" alt="Organize blocks" />
-    <img src="../../../assets/organize-list.png" alt="Organize list" />
+    <img
+      (click)="toggleCards = true"
+      src="../../../assets/organize-blocks.png"
+      alt="Organize blocks"
+    />
+    <img
+      (click)="toggleCards = false"
+      src="../../../assets/organize-list.png"
+      alt="Organize list"
+    />
   </div>
 </div>
 <h2>Favorites</h2>
-<div>
-  <app-chatbot-as-list></app-chatbot-as-list>
+<div *ngIf="!toggleCards">
+  <div class="mg-top-bot-24" *ngFor="let chatbot of chatbots">
+    <app-chatbot-as-list [chatbot]="chatbot"></app-chatbot-as-list>
+  </div>
+</div>
+<div *ngIf="toggleCards" class="grid-container">
+  <div *ngFor="let chatbot of chatbots">
+    <app-chatbot-as-square [chatbot]="chatbot"></app-chatbot-as-square>
+  </div>
 </div>

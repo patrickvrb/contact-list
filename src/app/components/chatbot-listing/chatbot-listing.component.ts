@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import chatbots from '../../../mocks/data.json';
+import data from '../../../mocks/data.json';
 
 @Component({
   selector: 'app-chatbot-listing',
@@ -7,9 +7,13 @@ import chatbots from '../../../mocks/data.json';
   styleUrls: ['./chatbot-listing.component.scss'],
 })
 export class ChatbotListingComponent implements OnInit {
+  chatbots = data;
+
+  toggleCards = false;
+
   constructor() {}
 
   ngOnInit(): void {
-    console.log(chatbots);
+    console.log(data);
   }
 }

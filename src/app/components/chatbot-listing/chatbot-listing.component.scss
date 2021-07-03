@@ -13,12 +13,26 @@ h2 {
   margin: 42px 0;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  row-gap: 10px;
+}
+
 *:focus {
   outline: none;
 }
 
 img {
   cursor: pointer;
+}
+
+.mg-top-bot-24 {
+  margin: 24px 0;
+}
+
+.mg-right-24 {
+  margin-right: 24px;
 }
 
 ::ng-deep {

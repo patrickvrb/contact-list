@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-chatbot-as-list',
   templateUrl: './chatbot-as-list.component.html',
-  styleUrls: ['./chatbot-as-list.component.scss']
+  styleUrls: ['./chatbot-as-list.component.scss'],
 })
 export class ChatbotAsListComponent implements OnInit {
+  @Input() chatbot: any;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
