@@ -1,6 +1,16 @@
 <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
-  <!-- <img src="../../../assets/favorite.png" alt="" /> -->
-  <img src="../../../assets/star.png" alt="Star" />
+  <img
+    (click)="removeFavorite(chatbot)"
+    *ngIf="chatbot.favorite"
+    src="../../../assets/favorite.png"
+    alt=""
+  />
+  <img
+    (click)="setFavorite(chatbot)"
+    *ngIf="!chatbot.favorite"
+    src="../../../assets/star.png"
+    alt="Star"
+  />
   <div class="panel" fxLayout="row">
     <span class="dot"></span>
     <div fxLayout="row" fxLayoutAlign="space-between center">
