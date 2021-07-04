@@ -1,1 +1,51 @@
-<p>chatbot-profile works!</p>
+<div>
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <img src="../../../assets/blip.png" alt="Blip" />
+    <div fxFlex fxLayoutAlign="space-between center">
+      <div fxLayout="column">
+        <div>{{ chatbot?.name }}</div>
+        <div>Id: {{ chatbot?.shortName }}</div>
+      </div>
+      <div>Created at {{ chatbot?.created | date: "dd/MM/yyyy" }}</div>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <div fxLayout="row">
+    <div fxFlex="70" fxLayout="column" fxLayoutGap="18px">
+      <div fxLayout="row" fxLayoutGap="18px">
+        <div fxFlex="30" class="panel">
+          <div>Region and idiom</div>
+          <div>EUA - English (EN)</div>
+          <div>Timezone</div>
+          <div>(UTC - 03:00) Brasília</div>
+        </div>
+        <div fxFlex class="panel">
+          <div>Region and idiom</div>
+          <div>EUA - English (EN)</div>
+          <div>Timezone</div>
+          <div>(UTC - 03:00) Brasília</div>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutGap="18px">
+        <div fxFlex="70" class="panel">
+          <div>Region and idiom</div>
+          <div>EUA - English (EN)</div>
+          <div>Timezone</div>
+          <div>(UTC - 03:00) Brasília</div>
+        </div>
+        <div fxFlex class="panel">
+          <div>Region and idiom</div>
+          <div>EUA - English (EN)</div>
+          <div>Timezone</div>
+          <div>(UTC - 03:00) Brasília</div>
+        </div>
+      </div>
+    </div>
+    <div fxFlex fxLayout="column" fxLayoutAlign="center center">
+      <img src="../../../assets/plano.png" alt="Balloon" />
+      <div>Status account</div>
+      <div>Free</div>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+</div>

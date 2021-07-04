@@ -1,10 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ChatbotListingComponent } from './components/chatbot-listing/chatbot-listing.component';
+import { ChatbotProfileComponent } from './components/chatbot-profile/chatbot-profile.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    component: ChatbotListingComponent,
+  },
+  {
+    path: 'profile',
+    component: ChatbotProfileComponent,
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

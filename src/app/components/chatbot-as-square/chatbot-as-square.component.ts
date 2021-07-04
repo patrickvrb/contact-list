@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Chatbot } from 'src/app/models/chatbot.model';
 import { ChatbotService } from 'src/app/services/chatbot.service';
 
@@ -10,7 +11,7 @@ import { ChatbotService } from 'src/app/services/chatbot.service';
 export class ChatbotAsSquareComponent implements OnInit {
   @Input() chatbot!: Chatbot;
 
-  constructor(private chatbotService: ChatbotService) {}
+  constructor(private chatbotService: ChatbotService, private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -20,5 +21,9 @@ export class ChatbotAsSquareComponent implements OnInit {
 
   removeFavorite(chatbot: Chatbot): void {
     this.chatbotService.removeFavorite(chatbot);
+  }
+
+  navigateToProfile(chatbot: Chatbot): Promise<boolean> {
+    return this.router.navigate(['profile'], { state: chatbot });
   }
 }

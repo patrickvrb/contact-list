@@ -12,7 +12,7 @@
     alt="Star"
   />
 
-  <div class="panel" fxLayout="row">
+  <div class="panel" fxLayout="row" (click)="navigateToProfile(chatbot)">
     <span [style.background-color]="chatbot.dotColor" class="dot"></span>
     <div fxFlex fxLayoutAlign="space-between center">
       <div class="name">{{ chatbot.name }}</div>

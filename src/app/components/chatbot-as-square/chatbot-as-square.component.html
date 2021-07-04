@@ -11,7 +11,11 @@
     src="../../../assets/star.png"
     alt="Favorite"
   />
-  <div fxLayout="column" fxLayoutAlign="center center">
+  <div
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    (click)="navigateToProfile(chatbot)"
+  >
     <span [style.background-color]="chatbot.dotColor" class="circle"></span>
     <div class="name">{{ chatbot.name | titlecase }}</div>
     <div class="tag">{{ chatbot.template | titlecase }}</div>
