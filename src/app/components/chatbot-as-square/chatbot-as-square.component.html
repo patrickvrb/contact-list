@@ -11,7 +11,9 @@
     src="../../../assets/star.png"
     alt="Favorite"
   />
-  <span [style.background-color]="chatbot.dotColor" class="circle"></span>
-  <div>{{ chatbot.name | titlecase }}</div>
-  <div>{{ chatbot.template | titlecase }}</div>
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <span [style.background-color]="chatbot.dotColor" class="circle"></span>
+    <div class="name">{{ chatbot.name | titlecase }}</div>
+    <div class="tag">{{ chatbot.template | titlecase }}</div>
+  </div>
 </div>

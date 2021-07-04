@@ -10,7 +10,13 @@ h2 {
   font-size: 42px;
   color: #607b99;
   font-family: "Lato", sans-serif;
+  font-weight: bold;
   margin: 42px 0;
+}
+
+.font-lato {
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
 }
 
 .container {
@@ -41,6 +47,7 @@ img {
     border-color: #d2dfe6;
     height: 36px;
     padding: 20px 8px;
+    font-weight: bold;
   }
 
   .mat-button {

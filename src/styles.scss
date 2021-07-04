@@ -34,7 +34,7 @@ $contact-list-theme: mat.define-light-theme(
 // that you are using.
 @include mat.all-component-themes($contact-list-theme);
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap");
 
 * {
   font-family: "Lato", sans-serif;

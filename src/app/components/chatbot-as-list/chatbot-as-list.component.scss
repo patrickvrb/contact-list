@@ -1,15 +1,32 @@
 .panel {
   background-color: white;
   border-radius: 8px;
-  padding: 16px;
+  padding: 20px 16px;
   box-shadow: 0 0 6px rgba(128, 128, 128, 0.2);
   width: 100%;
 }
 
 .dot {
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
   display: inline-block;
   margin-right: 10px;
+}
+
+.name {
+  color: #5d6d75;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.tag {
+  color: #7c8999cb;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+img {
+  cursor: pointer;
 }

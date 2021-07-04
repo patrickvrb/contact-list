@@ -33,7 +33,9 @@ export class ChatbotService {
   }
 
   randomColor(): string {
-    let randomColor = Math.floor(Math.random() * 16777215).toString(16);
-    return `#${randomColor}`;
+    let randomColor = Math.floor(Math.random() * 0xfffff * 1000000).toString(
+      16
+    );
+    return `#${randomColor.slice(0, 6)}`;
   }
 }
