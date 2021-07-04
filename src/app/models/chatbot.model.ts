@@ -20,7 +20,7 @@ interface Analytics {
 
 interface User {
   total: number;
-  activated: number;
+  actived: number;
 }
 
 interface Message {

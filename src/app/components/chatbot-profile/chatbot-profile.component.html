@@ -1,51 +1,89 @@
-<div>
+<div class="light-blue">
   <div fxLayout="row" fxLayoutAlign="start center">
-    <img src="../../../assets/blip.png" alt="Blip" />
+    <img
+      class="mg-right-16px circle diameter-75px"
+      [src]="getImage()"
+      alt="Avatar"
+    />
     <div fxFlex fxLayoutAlign="space-between center">
-      <div fxLayout="column">
-        <div>{{ chatbot?.name }}</div>
-        <div>Id: {{ chatbot?.shortName }}</div>
+      <div fxLayout="column" fxLayoutGap="8px">
+        <div class="font-bold font-24px">{{ chatbot?.name | titlecase }}</div>
+        <div class="grey">Id: {{ chatbot?.shortName }}</div>
       </div>
-      <div>Created at {{ chatbot?.created | date: "dd/MM/yyyy" }}</div>
+      <div class="grey">
+        Created at {{ chatbot?.created | date: "dd/MM/yyyy" }}
+      </div>
     </div>
   </div>
   <mat-divider></mat-divider>
-  <div fxLayout="row">
+  <div fxLayoutAlign="center center">
     <div fxFlex="70" fxLayout="column" fxLayoutGap="18px">
       <div fxLayout="row" fxLayoutGap="18px">
-        <div fxFlex="30" class="panel">
+        <div fxLayout="column" fxFlex="30" class="panel" fxLayoutGap="8px">
           <div>Region and idiom</div>
-          <div>EUA - English (EN)</div>
+          <div class="font-16px">
+            {{ getCulture(chatbot?.culture) }}
+          </div>
           <div>Timezone</div>
-          <div>(UTC - 03:00) Brasília</div>
+          <div class="font-16px">(UTC - 03:00) Brasilia</div>
         </div>
-        <div fxFlex class="panel">
-          <div>Region and idiom</div>
-          <div>EUA - English (EN)</div>
-          <div>Timezone</div>
-          <div>(UTC - 03:00) Brasília</div>
+        <div fxFlex class="panel" fxLayout="row" fxLayoutAlign="start center">
+          <div class="circle light-blue-bg img-offset diameter-15px">
+            <img src="../../../assets/user.png" alt="User" />
+          </div>
+          <div>
+            <div class="font-bolder font-24px mg-bot-8px">
+              {{ chatbot?.analytics?.user?.actived }}
+            </div>
+            <div>Active users</div>
+          </div>
         </div>
       </div>
       <div fxLayout="row" fxLayoutGap="18px">
-        <div fxFlex="70" class="panel">
-          <div>Region and idiom</div>
-          <div>EUA - English (EN)</div>
-          <div>Timezone</div>
-          <div>(UTC - 03:00) Brasília</div>
+        <div
+          fxFlex="60"
+          class="panel"
+          fxLayout="row"
+          fxLayoutAlign="start center"
+        >
+          <div class="circle light-green-bg diameter-15px">
+            <img src="../../../assets/union.png" alt="Message received" />
+          </div>
+          <div>
+            <div class="font-bolder font-24px mg-bot-8px">
+              {{ chatbot?.analytics?.message?.received }}
+            </div>
+            <div class="font-16px">Messages received</div>
+          </div>
         </div>
-        <div fxFlex class="panel">
-          <div>Region and idiom</div>
-          <div>EUA - English (EN)</div>
-          <div>Timezone</div>
-          <div>(UTC - 03:00) Brasília</div>
+        <div fxFlex class="panel" fxLayout="row" fxLayoutAlign="start center">
+          <div class="circle light-purple-bg diameter-15px">
+            <img src="../../../assets/sent.png" alt="Message sent" />
+          </div>
+          <div>
+            <div class="font-bolder font-24px mg-bot-8px">
+              {{ chatbot?.analytics?.message?.sent }}
+            </div>
+            <div class="font-16px">Messages sent</div>
+          </div>
         </div>
       </div>
     </div>
-    <div fxFlex fxLayout="column" fxLayoutAlign="center center">
+    <div
+      fxFlex
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      fxLayoutGap="16px"
+    >
       <img src="../../../assets/plano.png" alt="Balloon" />
-      <div>Status account</div>
-      <div>Free</div>
+      <div class="grey font-24px">Status account</div>
+      <div class="font-24px font-bold">{{ chatbot?.plan | titlecase }}</div>
+      <button mat-button>Update account</button>
     </div>
   </div>
   <mat-divider></mat-divider>
+  <div fxLayoutAlign="center center">
+    ©2021, BLiP All rights reserved |
+    <strong>Terms of Use</strong>
+  </div>
 </div>

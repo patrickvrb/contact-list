@@ -1,6 +1,78 @@
 .panel {
   background-color: white;
   padding: 32px;
+  height: 20vh;
   box-shadow: 0 0 6px rgba(128, 128, 128, 0.2);
   border-radius: 8px;
+}
+
+.font-16px {
+  font-size: 16px;
+}
+
+.font-bolder {
+  font-weight: 900;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-24px {
+  font-size: 24px;
+}
+
+.light-blue {
+  color: #52636c;
+}
+
+.grey {
+  color: #7c8999cb;
+}
+
+.mg-right-16px {
+  margin-right: 16px;
+}
+
+.light-blue-bg {
+  background-color: #2cc3d5;
+}
+
+.light-purple-bg {
+  background-color: #517bf2;
+}
+
+.light-green-bg {
+  background-color: #4dcb7b;
+}
+
+.circle {
+  display: inline-block;
+  position: relative;
+  padding: 12px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.diameter-15px {
+  width: 30px;
+  height: 30px;
+}
+
+.diameter-75px {
+  width: 150px;
+  height: 150px;
+}
+
+.circle img {
+  width: auto;
+  height: 100%;
+}
+
+.img-offset img {
+  margin-left: 4px;
+}
+
+.mg-bot-8px {
+  margin-bottom: 8px;
 }
