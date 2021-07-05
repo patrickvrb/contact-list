@@ -11,16 +11,15 @@ import { Chatbot } from 'src/app/models/chatbot.model';
 export class ChatbotProfileComponent implements OnInit {
   routerProps: NavigationExtras | undefined;
   routerState: any;
-  chatbot!: Chatbot;
+  chatbot: Chatbot;
 
   constructor(private router: Router, private sanitizer: DomSanitizer) {
     !this.router.navigated ? this.router.navigate(['']) : undefined;
     this.routerState = this.router.getCurrentNavigation()?.extras.state;
-  }
-
-  ngOnInit(): void {
     this.chatbot = this.routerState;
   }
+
+  ngOnInit(): void {}
 
   getImage(): SafeResourceUrl {
     return this.sanitizer.bypassSecurityTrustResourceUrl(this.chatbot.image);

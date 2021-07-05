@@ -12,6 +12,10 @@ const routes: Routes = [
     path: 'profile',
     component: ChatbotProfileComponent,
   },
+  {
+    path: '**',
+    component: ChatbotListingComponent,
+  },
 ];
 
 @NgModule({

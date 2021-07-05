@@ -27,7 +27,7 @@ export class ChatbotService {
     chatbotList[index].favorite = true;
   }
 
-  removeFavorite(chatbot: Chatbot) {
+  removeFavorite(chatbot: Chatbot): void {
     let index = chatbotList.indexOf(chatbot);
     chatbotList[index].favorite = false;
   }
