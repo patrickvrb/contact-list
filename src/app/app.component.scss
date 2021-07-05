@@ -1,5 +1,6 @@
 .pane {
-  padding: 94px 64px;
+  margin: 5%;
+  overflow-x: hidden;
 }
 
 .toolbar {
@@ -13,4 +14,8 @@
   align-items: center;
   justify-content: center;
   background-color: #1a2437;
+}
+
+.pointer {
+  cursor: pointer;
 }

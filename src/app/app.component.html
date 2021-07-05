@@ -1,9 +1,12 @@
-<div class="pane">
-  <div class="toolbar" role="banner">
-    <img alt="Blip Logo" src="../assets/logo.png" />
-  </div>
+<div class="toolbar" role="banner">
+  <img
+    (click)="home()"
+    class="pointer"
+    alt="Blip Logo"
+    src="../assets/logo.png"
+  />
+</div>
 
-  <div role="main">
-    <router-outlet></router-outlet>
-  </div>
+<div class="pane" role="main">
+  <router-outlet></router-outlet>
 </div>
