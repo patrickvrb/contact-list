@@ -40,6 +40,21 @@ img {
   margin-right: 24px;
 }
 
+.add-button {
+  position: fixed;
+  cursor: pointer;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 2%;
+  bottom: 2%;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #2cc3d5;
+}
+
 ::ng-deep {
   .mat-input-element {
     border-style: solid;
