@@ -1,13 +1,9 @@
 <div fxLayout="row">
   <h1 fxFlex="50">My chatbots</h1>
-  <div class="font-lato" fxFlex fxLayoutAlign="end center" fxLayoutGap="12px">
+  <div fxFlex fxLayoutAlign="end center" fxLayoutGap="12px">
     <input [(ngModel)]="searchText" fxFlex="40" matInput placeholder="Search" />
-    <button class="font-lato" (click)="orderByName()" mat-button>
-      Order by name
-    </button>
-    <button class="font-lato" (click)="orderByCreation()" mat-button>
-      Order by creation
-    </button>
+    <button (click)="orderByName()" mat-button>Order by name</button>
+    <button (click)="orderByCreation()" mat-button>Order by creation</button>
     <img
       (click)="toggleCards = true"
       src="../../../assets/organize-blocks.png"
